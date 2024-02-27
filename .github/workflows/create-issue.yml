@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: JasonEtco/create-an-issue@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      - uses: nashmaniac/create-issue-action@v1.2
         with:
-          assignees: xrabcde
-          label: bug
+          title: Build Failed
+          token: ${{secrets.TOKEN}}
+          labels: bug
